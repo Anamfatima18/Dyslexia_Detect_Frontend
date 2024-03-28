@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAE1E1"
+
+    android:padding="16dp">
+
+    <!-- Chronometer (Timer) aligned to the top right corner -->
+    <Chronometer
+        android:id="@+id/chronometerTimer"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!-- ScrollView for the paragraph -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chronometerTimer"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/linearLayoutButtons">
+
+        <!-- TextView for the paragraph -->
+        <TextView
+            android:id="@+id/tvParagraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circular_background"
+            android:backgroundTint="#C6FAAC3A"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textSize="25dp" />
+    </ScrollView>
+
+    <!-- TextView for Expected Reading Time -->
+
+
+    <!-- Container for Start and Done Buttons -->
+    <LinearLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/startStopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Done Button -->
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="20sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+</RelativeLayout>

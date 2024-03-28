@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/themePicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+     <!--      Score board-->
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="Score: 0/5"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+        <!--Level board-->
+    <TextView
+        android:id="@+id/levelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/scoreTextView"
+        android:text="Level: 1"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <!-- Chronometer (Timer) aligned to the top right corner -->
+    <Chronometer
+        android:id="@+id/chronometerTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <!-- TextView for the paragraph in the middle -->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvParagraph"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="600dp"-->
+<!--        android:layout_below="@id/chronometerTimer"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/circular_background"-->
+<!--        android:padding="16dp"-->
+<!--        android:textSize="25dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginBottom="20dp" />-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chronometerTimer"
+        android:layout_above="@id/buttonContainer"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tvParagraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circular_background"
+            android:padding="16dp"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+    </ScrollView>
+
+    <!-- TextView for Expected Reading Time -->
+    <TextView
+        android:id="@+id/expectedReadingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <!-- Container for Start and Done Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/buttonContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/startStopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Done Button -->
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="20sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+</RelativeLayout>
+</FrameLayout>
